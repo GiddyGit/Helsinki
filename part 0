@@ -1,0 +1,30 @@
+0.4 new note
+
+user->browser: 1. submit text
+browser->server: 2. 5 HTTP POST request
+server-->+browser: 3. HTTP GET
+browser->browser: 4. reload page
+browser->-server: 5. 3 more HTTP requests
+server-->browser: 6. new note
+
+0.5 Single page app 
+
+user->browser: 1. reload page 
+server-->+browser:  2. 5 HTTP GET 
+server-->browser: 3. Status code 200 created
+
+0.6 New Note
+
+
+user->browser: 1. submit text
+browser->server: 2. 1 HTTP POST request
+note over browser:
+Contains both content and date. 
+Data type is json
+end note
+server-->browser: 3. Status code 201 created
+server-->browser: 4. new note
+
+
+
+
